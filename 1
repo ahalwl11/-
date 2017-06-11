@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+
+
+void getLCP(char* s1, char*s2, char* LCP) {
+	//LCP가 공통 .
+	////////////////////////////////////////////////////
+	char *temp[100], *temp2[100];
+	sprintf(LCP, "");
+
+	int i, j, k, l1 = strlen(s1);
+
+	for (i = 0; i < l1; i++) {
+		for(j=l1-1;j>=0;j--){
+			for (k = i; k < j; k++) {
+				sprintf(temp, "%c", s1[k]);
+				strcat(temp2, temp);
+			}
+			if (strstr(s2, temp2) != 0) {
+				if (strlen(temp2) > strlen(LCP)) {
+					sprintf(LCP, "%s", temp2);
+				}
+				else;
+			}
+			else;
+			sprintf(temp2, "");
+
+		}
+	}
+	////////////////////////////////////////////////////
+}
+
+int main()
+{
+	char s1[100], s2[100], LCP_str[100];
+	scanf("%s %s", s1, s2);
+	getLCP(s1, s2, LCP_str);
+	printf("%s\n", LCP_str);
+	return 0;
+
+}
