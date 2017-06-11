@@ -1,0 +1,49 @@
+/*
+
+///////////////
+	다 틀림
+
+밑에거에 답이 맞는지도 모르겟음
+///////////////
+
+
+
+(1) Funtion call stack supports the function call/return mechanism.
+	Each time a funtion calls another function, a stack frame (also
+	known as an activation record) is pushed onto the stack.
+	The activation record the return address that the called function
+	needs to return to the calling function. The activation record stores and maintains
+	(a.          ), (b.           ), and (c.             ) when function is called.
+	
+	(a) parameter
+	(b) return address
+	(c) local variable
+
+	(
+
+	call stack
+
+	local variable (선언한 순서대로 
+	parameter (=argument, 매개변수, argument 인자)
+	return value
+	return address
+
+
+(2) (d.            ) occurs if the call stack pointer exceeds the stack bound,
+	meanin it occurs when more function calls occur than can have their activation
+	records stored on the function call stack (due to memory limitations)
+	
+	(d) Stack overflow 
+
+
+
+
+
+
+	int main(argc, argv[])
+
+
+
+
+
+*/
